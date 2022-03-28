@@ -1,0 +1,110 @@
+@import '~antd/dist/antd.css';
+
+.App {    
+    text-align: center;
+    /* margin: 2rem 0; */
+    padding-left: 20px;
+    padding-right: 20px;   
+}
+
+.Main {           
+    display: flex;
+    flex-direction: row;
+    padding: 20px;    
+}
+
+.SideBar {
+    display: flex;
+    flex-direction: column;
+    align-items: center ;    
+    height: 500px;  
+}
+
+.SideBar > h1 {
+    color: #0a66c2;
+}
+
+.Label {
+    display: flex;
+    flex-direction: row;    
+}
+
+.Label > .Title {
+    color: #0a66c2;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.Label > .Content {
+    color: gray;
+    font-size: 15px;
+    margin-left: 10px;    
+}
+
+.RightContent {
+    flex: 2;    
+    height: 500px;  
+    margin-left: 50px;
+}
+
+.RightContent > h1 {
+    color:#0a66c2;
+}
+
+.Avartar {
+    width: 30px;    
+}
+
+.Card {
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 0.1rem;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.userDetail {
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+}
+.Card > div {
+    display: flex;
+    align-items: center;
+}
+
+.Card--avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    margin-right: 0.5rem;
+}
+
+.Card--name {
+    text-transform: capitalize;
+    font-size: 1.1rem;
+}
+
+.Card--link {
+    text-decoration: none;
+    background: #00ace0;
+    color: #fff;
+    font-weight: 600;
+    padding: 0.45rem 0.7rem;
+    border-radius: 20px;
+}
+
+.Search {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    max-width: 500px;
+    width: 90%;
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+

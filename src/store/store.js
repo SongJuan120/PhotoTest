@@ -22,4 +22,3 @@ export const store = createStore(
   persistedReducer,
   composeWithDevTools(enhancer),
 );
-export const persistor = persistStore(store);

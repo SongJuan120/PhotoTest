@@ -1,7 +1,7 @@
 /* global document */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { persistor, store } from './store/store';
+import { store } from './store/store';
 import { Provider } from 'react-redux';
 
 import * as serviceWorker from './services/serviceWorker';

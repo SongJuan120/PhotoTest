@@ -1,9 +1,7 @@
-import React, {useState, useEffect} from 'react'
-import LabelTiltle from '../components/LabelTitle'
+import React, {useEffect} from 'react'
 import { useLocation } from "react-router-dom";
-
 import '../assets/styles/style.css'
-import { Image } from 'antd';
+
 
 function PhotoDetail() {
     const location = useLocation();
@@ -12,8 +10,7 @@ function PhotoDetail() {
     useEffect (()=> {
         console.log ("parma....", item)
     }, [])
-    return (        
-        
+    return (       
         <div className='detail-main'>            
             <div className='user-container'>
                 <h2>Name: {item.user}</h2>                

@@ -53,7 +53,7 @@ const Photo = (props) => {
                 {
                     leftArray.length > 0 && leftArray.map ((item, index)=> {
                         return (                            
-                            <img src={item.previewURL} width='100%' onClick={()=>moveDetailView(item)} />                            
+                            <img key={'img1' + item.id} src={item.previewURL} width='100%' onClick={()=>moveDetailView(item)} />                            
                         )
                     })
                 }
@@ -62,7 +62,7 @@ const Photo = (props) => {
                 {
                     midArray.length > 0 && midArray.map ((item, index)=> {
                         return (                            
-                            <img src={item.previewURL} width='100%'onClick={()=>moveDetailView(item)} />                            
+                            <img key={'img2' + item.id} src={item.previewURL} width='100%'onClick={()=>moveDetailView(item)} />                            
                         )
                     })
                 }
@@ -71,7 +71,7 @@ const Photo = (props) => {
                 {
                     rightArray.length > 0 && rightArray.map ((item, index)=> {
                         return (                            
-                            <img src={item.previewURL} width='100%' onClick={()=>moveDetailView(item)} />                            
+                            <img key={'img3' + item.id} src={item.previewURL} width='100%' onClick={()=>moveDetailView(item)} />                            
                         )
                     })
                 }

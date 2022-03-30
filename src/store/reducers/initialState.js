@@ -1,7 +1,7 @@
 export default {
     loadImage: {
-      loading: true,
-      data: null,
+      isLoading: false,
+      data: [],
       err: null
     },
 };

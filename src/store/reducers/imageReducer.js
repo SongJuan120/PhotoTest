@@ -6,18 +6,21 @@ const imageReducer = (state = initialState.loadImage, action) => {
     case getImageConstants.GET_IMAGES:
       return {
         ...state,
-        loggedIn: true,
+        isLoading: true,
       };
-    case getImageConstants.GET_IMAGES_SUCCESS:      
+    case getImageConstants.GET_IMAGES_SUCCESS:            
+      let tempArray = state.data
+      tempArray = [...state.data, ...action.payload]
       return {
         ...state,
-        loggedIn: false,
-        data: action.payload
+        isLoading: false,
+        data: tempArray
       };
     case getImageConstants.GET_IMAGES_FAILURE:
       return {
         ...state,
-        loggedIn: false,
+        isLoading: false,
+        err: action.payload
       };
     default:
       return state;

@@ -12,13 +12,12 @@ const getImgFailure = (error) => ({
 });
 
 export const getImageActions = (page) => {
-    return (dispatch) => {
-      // dispatch (getImgFailure("error..."))
+    return (dispatch) => {      
         photoService.getPhoto (page, (err, res)=> {      
-          if (err) {
+          if (err) {            
             dispatch(getImgFailure (err))
-          } else {
-            dispatch (getImgSuccess (res))            
+          } else {            
+            dispatch (getImgSuccess (res.hits))            
           }           
       })
     }  

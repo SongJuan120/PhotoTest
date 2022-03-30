@@ -1,5 +1,7 @@
 export default {
-    auth: {
-      loggedIn: true,
+    loadImage: {
+      loading: true,
+      data: null,
+      err: null
     },
-  };
+};

@@ -5,13 +5,12 @@ import { useLocation } from "react-router-dom";
 import '../assets/styles/style.css'
 import { Image } from 'antd';
 
-function UserDetail() {
+function PhotoDetail() {
     const location = useLocation();
     const data = location.state 
 
     useEffect (()=> {
         console.log ("parma....", location.state)
-
     }, [])
     return (
         <main className='Main'>                 
@@ -42,4 +41,4 @@ function UserDetail() {
         </main>
     )
 }
-export default UserDetail
+export default PhotoDetail

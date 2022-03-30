@@ -1,7 +1,5 @@
-export const authConstants = {
-    LOGIN_SUCCESS: 'LOGIN_SUCCESS',
-    LOGIN_FAILURE: 'LOGIN_FAILURE',  
-    LOGOUT_SUCCESS: 'LOGOUT_SUCCESS',
-
-    
-  };
+export const getImageConstants = {
+  GET_IMAGES: 'GET_IMAGES',
+  GET_IMAGES_FAILURE: 'GET_IMAGES_FAILURE',  
+  GET_IMAGES_SUCCESS: 'GET_IMAGES_SUCCESS',    
+};

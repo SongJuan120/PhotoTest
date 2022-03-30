@@ -12,12 +12,11 @@ const persistConfig = {
   key: 'root',
   storage,
   stateReconciler: autoMergeLevel2,
-  whitelist: ['auth'],
+  whitelist: ['imageReducer'],
   blacklist: [],
 };
 
 const enhancer = compose(applyMiddleware(thunk));
-
 const persistedReducer = persistReducer(persistConfig, reducers);
 export const store = createStore(
   persistedReducer,

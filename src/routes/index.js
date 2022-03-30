@@ -3,8 +3,8 @@ import { BrowserRouter, Switch , Route } from 'react-router-dom';
 
 //Containers
 import {
-  Users,
-  UserDetail
+  Photo,
+  PhotoDetail
 } from '../pages';
 
 /**
@@ -13,8 +13,8 @@ import {
 const Index = () => (
     <BrowserRouter>
         <Switch>
-            <Route path="/" exact component={Users} />            
-            <Route path="/detail/:id?" component={UserDetail} />                
+            <Route path="/" exact component={Photo} />            
+            <Route path="/detail/:id?" component={PhotoDetail} />                
         </Switch>
   </BrowserRouter>
 );

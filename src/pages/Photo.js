@@ -2,34 +2,79 @@ import React, {useState, useEffect} from 'react'
 import { connect } from 'react-redux';
 import {getImageActions} from '../store/actions/getImageActions'
 import '../assets/styles/style.css'
+import {Link} from 'react-router-dom'
 
 const Photo = (props) => { 
     
     const [currentPage, setCurrentPage] = useState (1)
+    const [leftArray, setLeftArray] = useState ([])
+    const [midArray, setMidArray] = useState ([])
+    const [rightArray, setRightArray] = useState ([])
 
-    useEffect (()=> {
-        console.log ("current index.....", currentPage)
-        props.getImageData (currentPage)                
+    useEffect (()=> {        
+        if (!props.isLoading) {
+            props.getImageData (currentPage)                
+        }        
     }, [currentPage])
 
-    const onScroll = (e) => {        
+    const onScroll = (e) => {           
         let element = e.target        
         if (element.scrollHeight - element.scrollTop === element.clientHeight) {            
             setCurrentPage (currentPage + 1)
         }
-    };       
+    };
+
+    useEffect (()=> {        
+       
+        const nCount = props.data.length;        
+        let left =[]
+        let mid =[]
+        let right =[]
+        for (let i = 0; i < nCount; i++) {
+            if (i % 3 == 0) left.push (props.data[i])
+            else if (i % 3 == 1) mid.push (props.data[i])
+            else right.push (props.data[i])
+        }
+        setLeftArray (left)
+        setRightArray (right)
+        setMidArray (mid)
+
+    }, [props.data])
 
     return (
-        <main className='App'>            
-            <div onScroll={onScroll}  style={{ height: 1000, overflowY: "scroll" }}>
+        <main className='App'>                       
+            <div className="container" onScroll={onScroll} >
+                <div className='section'>
                 {
-                    props.data && props.data?.map ((item, index) => {
-                        return (
-                            <img src={item.previewURL} width="30%" ></img>
+                    leftArray.length > 0 && leftArray.map ((item, index)=> {
+                        return (                            
+                            <img src={item.previewURL} width='100%'></img>                            
                         )
                     })
-                }                
-            </div>
+                }
+                </div>
+                <div className='section'>
+                {
+                    midArray.length > 0 && midArray.map ((item, index)=> {
+                        return (                            
+                            <img src={item.previewURL} width='100%'></img>                            
+                        )
+                    })
+                }
+                </div>
+                <div className='section'>
+                {
+                    rightArray.length > 0 && rightArray.map ((item, index)=> {
+                        return (                            
+                            <img src={item.previewURL} width='100%'></img>                            
+                        )
+                    })
+                }
+                </div>
+                {
+                    props.isLoading && <h1>Loading.....</h1>
+                }
+            </div>            
         </main>
     )
 }

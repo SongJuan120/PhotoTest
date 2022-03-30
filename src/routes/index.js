@@ -14,7 +14,7 @@ const Index = () => (
     <BrowserRouter>
         <Switch>
             <Route path="/" exact component={Photo} />            
-            <Route path="/detail/:id?" component={PhotoDetail} />                
+            <Route path="/detail" component={PhotoDetail} />                
         </Switch>
   </BrowserRouter>
 );

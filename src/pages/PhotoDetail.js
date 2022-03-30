@@ -7,38 +7,23 @@ import { Image } from 'antd';
 
 function PhotoDetail() {
     const location = useLocation();
-    const data = location.state 
+    const item = location.state.item
 
     useEffect (()=> {
-        console.log ("parma....", location.state)
+        console.log ("parma....", item)
     }, [])
-    return (
-        <main className='Main'>                 
-            <div className='SideBar'>
-                <img
-                    className='Avatar'
-                    src= {data.picture.large}
-                    width="200"                    
-                />
-                <h1>{data.login.username}</h1>                
+    return (        
+        
+        <div className='detail-main'>            
+            <div className='user-container'>
+                <h2>Name: {item.user}</h2>                
             </div>
-            <div className='RightContent'>
-                <h1>{data.name.first} {data.name.last} ({data.name.title})</h1>
-                <LabelTiltle name="Age" value={data.dob.age} />
-                <LabelTiltle name="Gender" value={data.gender} />
-                <LabelTiltle name="Street" value={data.location.street.name + data.location.street.number } />
-                <LabelTiltle name="City" value={data.location.city} />
-                <LabelTiltle name="State" value={data.location.state} />
-                <LabelTiltle name="Country" value={data.location.country} />
-                <LabelTiltle name="PostCode" value={data.location.postcode} />
-                <LabelTiltle name="Latitude" value={data.location.coordinates.latitude} />
-                <LabelTiltle name="Longitude" value={data.location.coordinates.longitude} />
-                <LabelTiltle name="Timezone" value={data.location.timezone.description + ' ' + data.location.timezone.offset} />
-                <LabelTiltle name="Email" value={data.email} />
-                <LabelTiltle name="Phone" value={data.phone}   />
-                <LabelTiltle name="Cell" value={data.cell}  />
-            </div>
-        </main>
+            <img src={item.largeImageURL} width='80%' />       
+            <h2>downloads: {item.downloads}</h2>                                             
+            <h2>views: {item.views}</h2>                     
+            <h2>size: {item.imageSize}</h2>           
+            <h2>Tags: {item.tags}</h2>
+        </div>            
     )
 }
 export default PhotoDetail

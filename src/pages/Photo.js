@@ -2,10 +2,11 @@ import React, {useState, useEffect} from 'react'
 import { connect } from 'react-redux';
 import {getImageActions} from '../store/actions/getImageActions'
 import '../assets/styles/style.css'
-import {Link} from 'react-router-dom'
+import { useHistory } from "react-router-dom";
 
 const Photo = (props) => { 
     
+    const history = useHistory();
     const [currentPage, setCurrentPage] = useState (1)
     const [leftArray, setLeftArray] = useState ([])
     const [midArray, setMidArray] = useState ([])
@@ -41,6 +42,10 @@ const Photo = (props) => {
 
     }, [props.data])
 
+    const moveDetailView = (item) => {        
+        history.push("detail", {item: item});
+    }
+
     return (
         <main className='App'>                       
             <div className="container" onScroll={onScroll} >
@@ -48,7 +53,7 @@ const Photo = (props) => {
                 {
                     leftArray.length > 0 && leftArray.map ((item, index)=> {
                         return (                            
-                            <img src={item.previewURL} width='100%'></img>                            
+                            <img src={item.previewURL} width='100%' onClick={()=>moveDetailView(item)} />                            
                         )
                     })
                 }
@@ -57,7 +62,7 @@ const Photo = (props) => {
                 {
                     midArray.length > 0 && midArray.map ((item, index)=> {
                         return (                            
-                            <img src={item.previewURL} width='100%'></img>                            
+                            <img src={item.previewURL} width='100%'onClick={()=>moveDetailView(item)} />                            
                         )
                     })
                 }
@@ -66,7 +71,7 @@ const Photo = (props) => {
                 {
                     rightArray.length > 0 && rightArray.map ((item, index)=> {
                         return (                            
-                            <img src={item.previewURL} width='100%'></img>                            
+                            <img src={item.previewURL} width='100%' onClick={()=>moveDetailView(item)} />                            
                         )
                     })
                 }

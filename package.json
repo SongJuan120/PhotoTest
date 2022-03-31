@@ -5,6 +5,7 @@
   "dependencies": {
     "antd": "^4.19.2",
     "axios": "^0.26.0",
+    "enzyme-adapter-react-16": "^1.15.6",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-loadingg": "^1.7.2",

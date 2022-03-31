@@ -12,11 +12,11 @@ const PhotoDetail = () => {
             <div className='user-container'>
                 <h2>Name: {item.user}</h2>                
             </div>
-            <img src={item.largeImageURL} width='80%' />       
+            <img src={item.largeImageURL} width='80%' alt='detail-image' />       
             <h2>downloads: {item.downloads}</h2>                                             
             <h2>views: {item.views}</h2>                     
             <h2>size: {item.imageSize}</h2>           
-            <h2>Tags: {item.tags}</h2>
+            <h2>tags: {item.tags}</h2>
         </div>            
     )
 }

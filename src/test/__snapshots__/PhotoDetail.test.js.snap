@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render PhotoDetail component 1`] = `
+<div
+  className="detail-main"
+>
+  <div
+    className="user-container"
+  >
+    <h2>
+      Name: 
+    </h2>
+  </div>
+  <img
+    width="80%"
+  />
+  <h2>
+    downloads: 
+  </h2>
+  <h2>
+    views: 
+  </h2>
+  <h2>
+    size: 
+  </h2>
+  <h2>
+    Tags: 
+  </h2>
+</div>
+`;

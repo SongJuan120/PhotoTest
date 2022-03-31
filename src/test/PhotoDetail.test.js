@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import PhotoDetail from "../pages/PhotoDetail";
 import "react-router-dom";
-import {act, render, fireEvent, cleanup} from '@testing-library/react';
+import {render} from '@testing-library/react';
 import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 

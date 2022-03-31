@@ -1,8 +1,7 @@
 ## Coding Exercise
- - This coding exercise will consist of a web application to be developed using 
- - React. 
- - This application will use Pixabay API (http://www.pixabay.com) to fetch images. These 
- - will have to be rendered on the page. The UI of this page should consist of a grid layout 
+ - This coding exercise will consist of a web application to be developed using React. 
+ - This application will use Pixabay API (http://www.pixabay.com) to fetch images. 
+ - These will have to be rendered on the page. The UI of this page should consist of a grid layout 
  - (for example like Pixabay itself or Unsplash). The content should be visible 
  - correctly both in desktop and smartphones. The pagination system for the content of the 
  - page will be decided by the developer (page numbers, infinite scroll, etc). 

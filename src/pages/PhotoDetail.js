@@ -3,13 +3,10 @@ import { useLocation } from "react-router-dom";
 import '../assets/styles/style.css'
 
 
-function PhotoDetail() {
+const PhotoDetail = () => {
     const location = useLocation();
     const item = location.state.item
 
-    useEffect (()=> {
-        console.log ("parma....", item)
-    }, [])
     return (       
         <div className='detail-main'>            
             <div className='user-container'>

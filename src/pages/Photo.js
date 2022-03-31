@@ -32,8 +32,8 @@ const Photo = (props) => {
         let mid =[]
         let right =[]
         for (let i = 0; i < nCount; i++) {
-            if (i % 3 == 0) left.push (props.data[i])
-            else if (i % 3 == 1) mid.push (props.data[i])
+            if (i % 3 === 0) left.push (props.data[i])
+            else if (i % 3 === 1) mid.push (props.data[i])
             else right.push (props.data[i])
         }
         setLeftArray (left)
@@ -53,7 +53,7 @@ const Photo = (props) => {
                 {
                     leftArray.length > 0 && leftArray.map ((item, index)=> {
                         return (                            
-                            <img key={'img1' + item.id} src={item.previewURL} width='100%' onClick={()=>moveDetailView(item)} />                            
+                            <img key={'img1' + item.id} src={item.previewURL} width='100%' onClick={()=>moveDetailView(item)} alt='' />                            
                         )
                     })
                 }
@@ -62,7 +62,7 @@ const Photo = (props) => {
                 {
                     midArray.length > 0 && midArray.map ((item, index)=> {
                         return (                            
-                            <img key={'img2' + item.id} src={item.previewURL} width='100%'onClick={()=>moveDetailView(item)} />                            
+                            <img key={'img2' + item.id} src={item.previewURL} width='100%'onClick={()=>moveDetailView(item)} alt='' />                            
                         )
                     })
                 }
@@ -71,7 +71,7 @@ const Photo = (props) => {
                 {
                     rightArray.length > 0 && rightArray.map ((item, index)=> {
                         return (                            
-                            <img key={'img3' + item.id} src={item.previewURL} width='100%' onClick={()=>moveDetailView(item)} />                            
+                            <img key={'img3' + item.id} src={item.previewURL} width='100%' onClick={()=>moveDetailView(item)} alt='' />                            
                         )
                     })
                 }

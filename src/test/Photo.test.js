@@ -3,6 +3,8 @@ import renderer from 'react-test-renderer';
 import Photo from "../pages/Photo";
 import { store } from '../store/store';
 import { connect, Provider } from 'react-redux';
+
+
 test('render Photo component', () => {
   const minProps = {
       isLoading: false,

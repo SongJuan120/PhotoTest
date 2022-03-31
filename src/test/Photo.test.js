@@ -2,8 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import Photo from "../pages/Photo";
 import { store } from '../store/store';
-import { connect, Provider } from 'react-redux';
-
+import { Provider } from 'react-redux';
 
 test('render Photo component', () => {
   const minProps = {
@@ -13,7 +12,7 @@ test('render Photo component', () => {
   };
   const component = renderer.create(
     <Provider store={store}>
-      <Photo {...minProps} connect />
+      <Photo {...minProps} />
     </Provider>,
   );
   let tree = component.toJSON();
